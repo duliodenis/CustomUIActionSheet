@@ -50,6 +50,10 @@
 }
 
 - (void)slideIn {
+    // (PranaviOS): Put in for iPhone 6 / 6 Plus Refinement
+    self.view.frame = [[UIScreen mainScreen] bounds];
+    [self.actionSheetView setBounds:CGRectMake(0, [[UIScreen mainScreen] bounds].origin.y, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    
     //set initial location at bottom of view
     CGRect frame = self.actionSheetView.frame;
     frame.origin = CGPointMake(0.0, self.view.bounds.size.height);
